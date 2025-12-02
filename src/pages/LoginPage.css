@@ -1,0 +1,339 @@
+:root{
+  --teal-1:#0f6b6b;
+  --teal-2:#18a29a;
+  --card-bg: #ffffff;
+  --muted:#6b7280;
+}
+
+*{box-sizing:border-box}
+
+
+.auth-page{
+  /* Fill the entire viewport and stay fixed so no dark margins appear */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display:flex;
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  /* Prevent inner scrolling and keep panels fixed to viewport */
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.auth-left{
+  flex: 1 1 50%;
+  background: linear-gradient(135deg, #083046 0%, #0e8b8b 100%);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  padding:64px 96px;
+  height:100vh;
+  position:relative;
+  left:0;
+  top:0;
+}
+
+.left-inner{
+  max-width:720px;
+  text-align:left;
+}
+
+.left-inner h1{
+  font-size:48px;
+  line-height:1.05;
+  margin:0 0 12px 0;
+  font-weight:800;
+}
+
+.left-inner .lead{
+  opacity:0.98;
+  margin:0 0 18px 0;
+  font-weight:700;
+  font-size:18px;
+}
+
+.left-inner .divider{
+  width:56px;
+  height:4px;
+  background:rgba(255,255,255,0.95);
+  margin:20px 0;
+  border-radius:4px;
+}
+
+.left-inner .desc{
+  color:rgba(255,255,255,0.95);
+  line-height:1.8;
+  font-size:15px;
+}
+
+.auth-right{
+  flex: 1 1 50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:80px 40px;
+  background:#fff;
+  height:100vh;
+  position:relative;
+  right:0;
+  top:0;
+}
+
+.login-card{
+  width:520px;
+  max-width: 90%;
+  background:var(--card-bg);
+  border-radius:14px;
+  padding:40px 48px;
+  box-shadow:0 30px 60px rgba(2,6,23,0.12);
+  text-align:center;
+}
+
+.logo{
+  width:64px;
+  height:64px;
+  margin:0 auto 12px auto;
+  border-radius:50%;
+  background:rgba(1,60,60,0.06);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--teal-1);
+  font-weight:700;
+}
+
+.uni-logo{
+  width:72px;
+  height:72px;
+  object-fit:contain;
+  margin:0 auto 12px auto;
+  display:block;
+}
+
+/* If the logo SVG has white lines on transparent background, add a subtle dark circle
+   so the white logo becomes visible on the white card. */
+.uni-logo{
+  background: linear-gradient(180deg, rgba(7,54,54,0.06), rgba(7,54,54,0.02));
+  padding:10px;
+  border-radius:50%;
+}
+
+.card-title{
+  margin:6px 0 6px 0;
+}
+
+.card-title-sub{
+  color:var(--muted);
+  font-size:14px;
+  font-weight:600;
+  margin:12px 0 4px 0;
+  line-height:1.4;
+}
+
+.card-sub{
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+.login-form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top:12px;
+}
+
+.input-label{
+  position:relative;
+}
+
+.input-label .icon{
+  position:absolute;
+  left:14px;
+  top:50%;
+  transform:translateY(-50%);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.input-label input{
+  width:100%;
+  padding:14px 14px 14px 46px;
+  border:1px solid #e6e9ee;
+  border-radius:8px;
+  font-size:15px;
+  background:#fff;
+  color:#213547;
+}
+
+.input-label .eye{
+  position:absolute;
+  right:12px;
+  top:50%;
+  transform:translateY(-50%);
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 18px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:700;
+  border:1px solid transparent;
+  width:100%;
+}
+.btn.primary{
+  background:var(--teal-1);
+  color:white;
+  border-color:var(--teal-1);
+  font-size:16px;
+  padding:14px 18px;
+}
+
+.btn.outline{
+  background:transparent;
+  border:1px solid rgba(16,128,128,0.16);
+  color:var(--teal-1);
+  padding:12px 14px;
+  margin-top:10px;
+}
+
+.alt-actions{
+  margin-top:18px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.login-card .copyright{
+  margin-top:16px;
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* Desktop: 1024px and above - show both panels */
+@media (min-width:1024px){
+  .auth-left{
+    display:flex;
+  }
+}
+
+/* Tablet and below: hide left panel */
+@media (max-width:1023px){
+  .auth-left{
+    display:none;
+  }
+  .auth-right{
+    flex: 1 1 100%;
+    background:#ffffff;
+  }
+}
+
+/* Tablet (iPad-like screens): 600px to 1023px */
+@media (max-width:1023px) and (min-width:600px){
+  .auth-page{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    flex-direction:column;
+    overflow: hidden;
+    background: #ffffff;
+    align-items: center;
+    justify-content: center;
+  }
+  body, html, #root {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  .auth-right{
+    height: auto;
+    flex: 0 0 auto;
+    padding: 0;
+    background: transparent;
+  }
+  .login-card{
+    width: 100%;
+    max-width: 460px;
+    margin: 0;
+  }
+}
+
+/* Mobile phones: below 600px */
+@media (max-width:599px){
+  .auth-page{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    flex-direction:column;
+    overflow: hidden;
+    background: #ffffff;
+    align-items: center;
+    justify-content: center;
+  }
+  body, html, #root {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  .auth-right{
+    height: auto;
+    flex: 0 0 auto;
+    padding: 0;
+    background: transparent;
+  }
+  .login-card{
+    width: 100%;
+    max-width: calc(100% - 32px);
+    padding: 24px 20px;
+    border-radius: 12px;
+    margin: 0 16px;
+  }
+  .uni-logo{
+    width:56px;
+    height:56px;
+    padding:6px;
+  }
+  .card-title{
+    font-size:18px;
+    margin:4px 0;
+  }
+  .card-sub{
+    font-size:12px;
+  }
+  .input-label input{
+    padding:12px 12px 12px 40px;
+    font-size:14px;
+  }
+  .btn{
+    padding:12px 14px;
+    font-size:14px;
+  }
+  .btn.primary{
+    font-size:14px;
+  }
+}
