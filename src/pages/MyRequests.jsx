@@ -8,7 +8,6 @@ export default function MyRequests() {
   const [activeFilter, setActiveFilter] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
 
-  // Mock data - arizalar
   const requests = [
     {
       id: '001',
@@ -84,7 +83,6 @@ export default function MyRequests() {
     { id: 'completed', label: 'Bajarilgan', count: completedRequests }
   ]
 
-  // Filter arizalar
   const filteredRequests = requests.filter(req => {
     const matchesFilter = activeFilter === 'all' || req.status === activeFilter
     const matchesSearch = req.id.includes(searchQuery) ||
@@ -102,7 +100,6 @@ export default function MyRequests() {
           <p className="requests-count">Jami so'rovlar: {totalRequests}</p>
           
           <div className="page-content">
-            {/* Filter Section */}
             <div className="requests-filter">
               <div className="filter-buttons">
                 {filters.map(filter => (
@@ -131,7 +128,6 @@ export default function MyRequests() {
               </div>
             </div>
 
-            {/* Requests List */}
             <div className="requests-list">
               {filteredRequests.length === 0 ? (
                 <p className="empty-state">Arizalar topilmadi</p>

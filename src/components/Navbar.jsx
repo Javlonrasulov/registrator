@@ -29,7 +29,6 @@ export default function Navbar() {
         </button>
 
         <div className={`navbar-menu ${isOpen ? 'mobile-open' : ''}`}>
-          {/* Search - Mobile Top */}
           <div className="mobile-search">
             <div className="search-box">
               <svg className="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -44,7 +43,6 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Nav Links - Middle */}
           <div className="mobile-nav-links">
           <Link to="/dashboard" className={`nav-link ${isActive('/dashboard')}`} onClick={() => setIsOpen(false)}>So'rovlar</Link>
           <Link to="/about" className={`nav-link ${isActive('/about')}`} onClick={() => setIsOpen(false)}>Biz haqimizda</Link>
@@ -55,7 +53,6 @@ export default function Navbar() {
           <Link to="/help" className={`nav-link ${isActive('/help')}`} onClick={() => setIsOpen(false)}>Yordam</Link>
           </div>
 
-          {/* Logout - Mobile Bottom */}
           <div className="mobile-logout">
             <Link to="/login" className="logout-btn" onClick={() => setIsOpen(false)}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -68,7 +65,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Desktop Actions */}
         <div className="desktop-actions">
           <button 
             className="search-icon-btn"
@@ -91,7 +87,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Desktop Search Dropdown */}
       {searchOpen && (
         <div className="search-dropdown">
           <div className="search-dropdown-content">

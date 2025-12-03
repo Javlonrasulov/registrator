@@ -75,7 +75,6 @@ export default function Help() {
               </div>
             </div>
 
-            {/* Qo'llab-quvvatlash xizmati */}
             <div className="support-section">
               <div className="support-header">
                 <div className="support-icon">

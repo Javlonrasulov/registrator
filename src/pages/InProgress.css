@@ -21,7 +21,6 @@
   margin: 0;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .progress-percent {
     font-size: 36px;

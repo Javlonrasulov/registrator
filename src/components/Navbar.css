@@ -179,17 +179,14 @@
   }
 }
 
-/* Mobile Search */
 .mobile-search {
   display: none;
 }
 
-/* Mobile Nav Links */
 .mobile-nav-links {
   display: contents;
 }
 
-/* Mobile Logout */
 .mobile-logout {
   display: none;
 }
@@ -258,7 +255,6 @@
   flex-shrink: 0;
 }
 
-/* Desktop Actions */
 .desktop-actions {
   display: flex;
   align-items: center;
@@ -315,7 +311,6 @@
   color: #dc2626;
 }
 
-/* Search Dropdown */
 .search-dropdown {
   position: absolute;
   top: 100%;
@@ -398,15 +393,13 @@
   box-shadow: 0 2px 8px rgba(15, 107, 107, 0.3);
 }
 
-/* Desktop styles for bottom section */
-@media (min-width: 901px) {
+@media (min-width: 900px) {
   .navbar-bottom {
     display: none;
   }
 }
 
-/* Mobile styles */
-@media (max-width: 900px) {
+@media (max-width: 899px) {
   .desktop-actions {
     display: none;
   }

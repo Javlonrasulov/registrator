@@ -24,9 +24,7 @@ export default function About() {
               <p>Registrator ofisi talabalar uchun barcha ma'muriy xizmatlarni bir joyda taqdim etish va ularning akademik hayotini osonlashtirishga qaratilgan. Biz talabalar va universitet o'rtasidagi asosiy aloqa bo'g'ini hisoblanmiz.</p>
             </div>
 
-            {/* Asosiy funksiyalar va Maqsadlarimiz - Grid */}
             <div className="features-grid">
-              {/* Asosiy funksiyalar */}
               <div className="feature-card">
                 <div className="card-icon target">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -44,7 +42,6 @@ export default function About() {
                 </ul>
               </div>
 
-              {/* Maqsadlarimiz */}
               <div className="feature-card">
                 <div className="card-icon award">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
