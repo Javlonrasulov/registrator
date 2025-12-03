@@ -7,24 +7,13 @@
 
 *{box-sizing:border-box}
 
-body:has(.auth-page) {
-  overflow: hidden;
-}
-
 .auth-page{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
   margin: 0;
   padding: 0;
   display:flex;
   font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  overflow: hidden;
-  z-index: 9999;
 }
 
 .auth-left{
@@ -35,10 +24,7 @@ body:has(.auth-page) {
   align-items:center;
   justify-content:flex-start;
   padding:64px 96px;
-  height:100vh;
-  position:relative;
-  left:0;
-  top:0;
+  min-height:100vh;
 }
 
 .left-inner{
@@ -81,10 +67,7 @@ body:has(.auth-page) {
   justify-content:center;
   padding:80px 40px;
   background:#fff;
-  height:100vh;
-  position:relative;
-  right:0;
-  top:0;
+  min-height:100vh;
 }
 
 .login-card{
@@ -240,28 +223,13 @@ body:has(.auth-page) {
 
 @media (max-width:1023px) and (min-width:600px){
   .auth-page{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
     flex-direction:column;
-    overflow: hidden;
     background: #ffffff;
     align-items: center;
     justify-content: center;
-  }
-  body, html, #root {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+    padding: 40px 20px;
   }
   .auth-right{
-    height: auto;
     flex: 0 0 auto;
     padding: 0;
     background: transparent;
@@ -275,28 +243,13 @@ body:has(.auth-page) {
 
 @media (max-width:599px){
   .auth-page{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
     flex-direction:column;
-    overflow: hidden;
     background: #ffffff;
     align-items: center;
     justify-content: center;
-  }
-  body, html, #root {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+    padding: 20px 16px;
   }
   .auth-right{
-    height: auto;
     flex: 0 0 auto;
     padding: 0;
     background: transparent;

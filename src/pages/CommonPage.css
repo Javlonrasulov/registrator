@@ -3,6 +3,7 @@
   background: #f9fafb;
   display: flex;
   flex-direction: column;
+  padding-top: 64px;
 }
 
 .page-main {
