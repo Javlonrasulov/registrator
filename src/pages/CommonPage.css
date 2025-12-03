@@ -1,0 +1,45 @@
+.common-page {
+  min-height: 100vh;
+  background: #f9fafb;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-main {
+  padding: 40px 24px;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 24px 0;
+}
+
+.page-content {
+  color: #4b5563;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .page-main {
+    padding: 24px 16px;
+  }
+
+  .page-container {
+    padding: 24px 20px;
+  }
+
+  .page-title {
+    font-size: 22px;
+  }
+}

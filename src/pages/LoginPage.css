@@ -7,6 +7,9 @@
 
 *{box-sizing:border-box}
 
+body:has(.auth-page) {
+  overflow: hidden;
+}
 
 .auth-page{
   position: fixed;
