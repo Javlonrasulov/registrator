@@ -31,6 +31,121 @@
   line-height: 1.8;
 }
 
+.intro-text {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 32px;
+}
+
+/* Info Card - Vazifamiz */
+.info-card {
+  background: #f0fdfa;
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 32px;
+  border: 1px solid #e0f2f1;
+}
+
+.info-card .card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.info-card .card-icon.briefcase {
+  background: #e0f2f1;
+  color: #00897b;
+}
+
+.info-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 12px 0;
+}
+
+.info-card p {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.feature-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 28px;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.feature-card .card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.feature-card .card-icon.target {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.feature-card .card-icon.award {
+  background: #f3e8ff;
+  color: #9333ea;
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 16px 0;
+}
+
+.feature-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-card ul li {
+  font-size: 14px;
+  color: #6b7280;
+  padding: 8px 0 8px 24px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.feature-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 8px;
+  color: #00897b;
+  font-weight: bold;
+  font-size: 18px;
+}
+
 @media (max-width: 768px) {
   .page-main {
     padding: 24px 16px;
@@ -42,5 +157,18 @@
 
   .page-title {
     font-size: 22px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .info-card {
+    padding: 24px;
+  }
+
+  .feature-card {
+    padding: 20px;
   }
 }

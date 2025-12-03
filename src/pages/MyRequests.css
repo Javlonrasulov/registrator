@@ -1,0 +1,359 @@
+/* Requests Count */
+.requests-count {
+  color: #6b7280;
+  font-size: 15px;
+  margin: -16px 0 24px 0;
+}
+
+/* Requests Filter */
+.requests-filter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btn.active {
+  font-weight: 600;
+  border-width: 2px;
+}
+
+/* Barchasi - default ko'k */
+.filter-btn.active:nth-child(1) {
+  background: #2563eb;
+  border-color: #1d4ed8;
+  color: white;
+}
+
+/* Yangi - ochiq ko'k */
+.filter-btn.active:nth-child(2) {
+  background: #dbeafe;
+  border-color: #2563eb;
+  color: #1e40af;
+}
+
+/* Jarayonda - sariq */
+.filter-btn.active:nth-child(3) {
+  background: #fef3c7;
+  border-color: #f59e0b;
+  color: #b45309;
+}
+
+/* Bajarilgan - yashil */
+.filter-btn.active:nth-child(4) {
+  background: #d1fae5;
+  border-color: #10b981;
+  color: #065f46;
+}
+
+.filter-search {
+  position: relative;
+  min-width: 280px;
+}
+
+.filter-search .search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.filter-search .search-input {
+  width: 100%;
+  padding: 10px 12px 10px 40px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #374151;
+  background: white;
+  transition: all 0.2s;
+}
+
+.filter-search .search-input::placeholder {
+  color: #9ca3af;
+}
+
+.filter-search .search-input:focus {
+  outline: none;
+  border-color: #0f6b6b;
+  box-shadow: 0 0 0 3px rgba(15, 107, 107, 0.1);
+}
+
+/* Requests List */
+.requests-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.empty-state {
+  text-align: center;
+  color: #9ca3af;
+  padding: 40px;
+  font-size: 15px;
+}
+
+/* Request Card */
+.request-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s;
+}
+
+.request-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #d1d5db;
+}
+
+.request-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.request-id-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.request-id {
+  color: #6b7280;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-badge.status-new {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-badge.status-new svg {
+  animation: spin 3s linear infinite;
+}
+
+.status-badge.status-in-progress {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.status-badge.status-in-progress svg {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.status-badge.status-completed {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge.status-completed svg {
+  animation: checkmark 0.5s ease-in-out;
+}
+
+@keyframes checkmark {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.request-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.request-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 12px 0;
+}
+
+.request-category {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #f3f4f6;
+  color: #4b5563;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.request-description {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+/* Progress Bar */
+.request-progress {
+  margin-top: 16px;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.progress-status {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.progress-bar {
+  position: relative;
+}
+
+.progress-track {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.progress-fill.progress-new {
+  background: #3b82f6;
+}
+
+.progress-fill.progress-in-progress {
+  background: #f59e0b;
+}
+
+.progress-fill.progress-completed {
+  background: #10b981;
+}
+
+.progress-dots {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2px;
+}
+
+.progress-dot {
+  font-size: 8px;
+  color: #d1d5db;
+  transition: color 0.3s;
+}
+
+.progress-dot.active.dot-new {
+  color: #3b82f6;
+}
+
+.progress-dot.active.dot-in-progress {
+  color: #f59e0b;
+}
+
+.progress-dot.active.dot-completed {
+  color: #10b981;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .requests-filter {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+  }
+
+  .filter-buttons {
+    width: 100%;
+  }
+
+  .filter-btn {
+    flex: 1;
+    min-width: calc(50% - 4px);
+  }
+
+  .filter-search {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .request-card {
+    padding: 20px;
+  }
+
+  .request-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .request-title {
+    font-size: 16px;
+  }
+}
