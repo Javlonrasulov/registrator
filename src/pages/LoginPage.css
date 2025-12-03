@@ -9,7 +9,6 @@
 
 
 .auth-page{
-  /* Fill the entire viewport and stay fixed so no dark margins appear */
   position: fixed;
   top: 0;
   left: 0;
@@ -21,7 +20,6 @@
   padding: 0;
   display:flex;
   font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  /* Prevent inner scrolling and keep panels fixed to viewport */
   overflow: hidden;
   z-index: 9999;
 }
@@ -117,8 +115,6 @@
   display:block;
 }
 
-/* If the logo SVG has white lines on transparent background, add a subtle dark circle
-   so the white logo becomes visible on the white card. */
 .uni-logo{
   background: linear-gradient(180deg, rgba(7,54,54,0.06), rgba(7,54,54,0.02));
   padding:10px;
@@ -223,14 +219,12 @@
   color:var(--muted);
 }
 
-/* Desktop: 1024px and above - show both panels */
 @media (min-width:1024px){
   .auth-left{
     display:flex;
   }
 }
 
-/* Tablet and below: hide left panel */
 @media (max-width:1023px){
   .auth-left{
     display:none;
@@ -241,7 +235,6 @@
   }
 }
 
-/* Tablet (iPad-like screens): 600px to 1023px */
 @media (max-width:1023px) and (min-width:600px){
   .auth-page{
     position: fixed;
@@ -277,7 +270,6 @@
   }
 }
 
-/* Mobile phones: below 600px */
 @media (max-width:599px){
   .auth-page{
     position: fixed;

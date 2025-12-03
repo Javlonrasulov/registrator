@@ -35,7 +35,6 @@ body {
   place-items: center;
   min-width: 320px;
   height: 100%;
-  /* Disable browser scrolling so left/right panels stay fixed to viewport */
   overflow: hidden;
 }
 
